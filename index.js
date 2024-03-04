@@ -29,6 +29,10 @@ buttons.forEach((btn) => { // por cada boton
             display.value = btn.id; // se sustituye por el boton clicado siguiente
         }
 
+        else if (display.value.includes('Error')) { //si en la pantalla hay error
+            display.value = btn.id; // reiniciar con el siguietne boton
+        }
+
         else {
             display.value += btn.id; // que se sumen uno al lado de otro los botones clicados
         }
@@ -36,6 +40,7 @@ buttons.forEach((btn) => { // por cada boton
     });
 
 });
+
 
 // problemas:
 // no puedo poner decimales en mas de un numero
